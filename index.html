@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Face Recognition – Known Folder (Stable)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <h1>Live Recognition (known folder)</h1>
+    <div id="status" class="status">Loading…</div>
+
+    <section class="stage">
+      <video id="video" autoplay muted playsinline></video>
+      <!-- overlay canvas injected automatically -->
+    </section>
+  </main>
+
+
+<!-- Web Serial panel (mobile-friendly) -->
+<div id="serial-panel" style="
+  position:sticky; bottom:0; left:0; right:0;
+  display:flex; gap:8px; align-items:center; justify-content:space-between;
+  padding:12px; background:#111; color:#fff; border-top:1px solid #333;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; z-index:9999;">
+  <div id="serial-status" style="font-weight:700;">Not connected</div>
+  <button id="serial-toggle" style="
+    padding:10px 14px; border:0; border-radius:10px;
+    background:#2ecc71; color:#111; font-weight:800; font-size:14px;">
+    Connect
+  </button>
+</div>
+
+
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+</body>
+</html>
